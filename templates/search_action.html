@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}AI Progetto - Result Search{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<h1>{{ data.result.first_label | title }}</h1>
+		<h2> {{ data.result.action | title }} search on your photo</h2>
+		
+		<div id="box_result_loader" class="loader"></div>
+		<div id="box_result_status" class="row"><p></p></div>
+		<div id="box_result" class="row"></div>
+	</div>
+{% endblock %}
+
+{% block customjs %}
+	<script>
+		var result_request = JSON.parse('{{ data | tojson | safe}}');
+	</script>
+	<script src="{{ url_for('static', filename='search_action.js') }}" ></script>
+	<script>
+		doSearchResult()
+	</script>
+{% endblock %}

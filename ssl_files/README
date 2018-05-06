@@ -1,0 +1,6 @@
+Aggiungere in questa cartella i certificati
+
+cert.pem
+key.pem
+
+usati da Flask 

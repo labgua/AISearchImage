@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block customcss %}
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='index.css') }}">
+{% endblock %}
+
+{% block title %}AI Progetto - titolo pagina{% endblock %}
+
+{% block body %}
+	 <body class="text-center">
+		<form class="form-signin">
+			<img src="{{ url_for('static', filename='logo_big.png') }}" alt="" >
+			<p class="mb-4"><i>Take a photo and get your serivce!</i></p>
+			<h1 class="h3 mb-3 font-weight-normal">What are you seeing?</h1>
+ 
+			<!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button> -->
+
+			<button type="button" class="btn btn-lg btn-success" onclick="selectImg()" >Select a photo</button>
+			
+			<input id="file-input" type="file" name="name" style="display: none;" onchange="onSelectedImg()" />
+
+			<div class="loader" style="display: none;" ></div>
+			<div id="info-status"><p></p></div>
+			<p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+		</form>
+	 </body>
+{% endblock %}
+
+{% block customjs %}
+	<script src="{{ url_for('static', filename='client.js') }}" ></script>
+{% endblock %}

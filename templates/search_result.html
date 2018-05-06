@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}AI Progetto - Result Search{% endblock %}
+
+{% block body %}
+	<div class="container">
+
+		<h1>{{ data.result.first_label | title }}</h1>
+		
+
+		<div class="row">
+			<div class="col-md-8">
+				
+				<p>The object in the photo would be <i>{{ data.result.recognition[0].label }}</i> </p>
+				<p>It is a <span>{{ data.result.category }}</span> </p>
+				
+				<p>It could be also :</p>
+				<ul>
+					{% for r in data.result.recognition %}
+						<li><p><b>{{ r.label }}</b> : {{ r.score }}</p></li>
+					{% endfor %}
+				</ul>
+				
+				<h4>Associated Object</h4>
+				<ul>
+					{% for o in data.result.associated_objects %}
+						<li><p>{{ o }}</p></li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-md-4">
+					
+				<div class="card">
+					<img class="card-img-top" src="{{ url_for('serve_img', id_request=data.result.id_request) }}" alt="Card image cap">
+					<ul class="list-group list-group-flush text-white">
+						{% for service in data.result.services %}
+							<li class="list-group-item">
+								<a class="btn btn-primary btn-block" href="{{ data.result.id_request }}?action={{ service }}" role="button">{{ service | title }}</a>
+							</li>
+						{% endfor %} 
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+
+	</div>
+{% endblock %}
+
+{% block customjs %}
+	<script>
+		var result_request = JSON.parse('{{ data | tojson | safe}}');
+	</script>
+{% endblock %}

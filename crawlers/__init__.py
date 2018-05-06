@@ -1,0 +1,1 @@
+# in questo package sono presenti tutte le definizioni di crawler, classi che estendono CrawlerInfoBase o CrawlerImageBase
