@@ -6,11 +6,8 @@
 	<p><b>DIPARTIMENTO DI INFORMATICA</b></p>
 	<p>Corso di Laurea Magistrale</p>
 	<p>Progetto per il corso di Intelligenza Artificiale</p>
-
 	<p><img src="logo_aisearchimage.svg.png" /></p>
 	<p><b>AISearchImage: SVILUPPO E PROGETTAZIONE DI UN MOTORE DI RICERCA DI SERVIZI INTELLIGENTE</b></p>
-
-
 	<table style="display:inline-table; width:90%; position:relative;text-align:center;">
 		<thead>
 			<tr><td>Professori</td><td>Studenti</td></tr>
@@ -20,10 +17,7 @@
 			<tr><td>Giuseppe Polese</td><td>Sergio Guastaferro</td></tr>
 		</tbody>
 	</table>
-
-
 	<p>Anno Accademico 2017/2018</p>
-
 </div>
 
 ------------------------------------------------------
