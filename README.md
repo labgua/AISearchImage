@@ -1,4 +1,7 @@
 # AISearchImage
+
+![](doc/logo_aisearchimage.svg.png)
+
 Intelligent Search Engine Of Services Image-Based
 
 ## What is it?
@@ -9,3 +12,8 @@ Then the class to which the recognized object belongs is determined, using the W
 This system can be consulted on different types of devices thanks to an architecture based on the REST-like architectural style implemented with Flask.
 
 The project was developed in collaboration with Lorenzo Valente and supervised by Prof. Vincenzo Deufemia during the course of Artificial Intelligence.
+
+
+## Documentation
+
+To read more details about the implementation read the documentation in the doc directory where there is an extract of the document.
